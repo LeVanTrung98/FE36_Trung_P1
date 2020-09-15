@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 $color-text: #363636;
+$color-yellow: #f5bd10;
+$color-gray: #b6b6b6;
 .container{
     width: 80%;
     margin: auto;
@@ -12,7 +14,8 @@ html{
     font-family: Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: 300;
-    font-size: 12px;
+    font-size: 14px;
+    line-height: 1.5;
 }
 a:any-link{
     text-decoration: none;
@@ -20,9 +23,10 @@ a:any-link{
 // header
 %li-top-header{
     display: inline-block;
-    padding:17px 20px;
+    padding:15px 20px;
     border-right: 1px solid darken(#f7f7f7, 5);
 }
+
 .top{
     width: 100%;
     height: 50px;
@@ -38,7 +42,7 @@ a:any-link{
        @extend %li-top-header;
         
         &:first-child{
-            background-color: #f5bd10;
+            background-color: $color-yellow;
 
             .top__socials-list-link:first-child{
                 color: #ffffff;
@@ -46,7 +50,6 @@ a:any-link{
         }
     }
     &__socials-list-link{
-        font-size: 14px;
         color: #363636;
 
     }
@@ -62,10 +65,61 @@ a:any-link{
         }
 
         &-list-link{
-            font-size: 14px;
             color: $color-text;
             text-transform: uppercase;
-            font-weight: 500;
+            font-weight: 600;
+        }
+    }
+}
+.middle{
+    width: 100%;
+    height: 120px;
+
+    &__wrapper{
+        @extend .top__wrapper;
+        justify-content: space-between;
+    }
+    &__logo{
+        flex:1;
+    }
+    &__logo-img{
+        height: auto;
+        width: 140px;
+    }
+    &__hotline{
+        display: flex;
+        justify-content: space-between;
+
+        & > div{
+            padding-right: 50px;
+        }
+        &-title{
+            font-weight:600;
+            color: $color-yellow;
+            text-transform: uppercase;
+        }
+        &-phone{
+            font-size: 13px;
+            color:$color-gray ;
+        }
+    }
+    &__input-search{
+        $text-index: 20px;
+
+        width: 320px;
+        height: 50px;
+        border-radius: 25px;
+        border: .5px solid darken(#f7f7f7, 5);  
+        text-indent :$text-index;
+        outline:none;
+
+        background: #ffffff url(../assets/images/icon-searcch.png) no-repeat right center;
+        background-position-x: calc(100% - 20px);
+        background-size: 25px;
+
+        &::placeholder{
+            text-indent:$text-index;
+            color: $color-gray;
         }
     }
 }

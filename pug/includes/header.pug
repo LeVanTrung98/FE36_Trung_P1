@@ -1,12 +1,10 @@
-mixin list-icon-top-header(values)
-    each value in values
-        li(class=attributes.class + '-list-item')
-            a(href="" class=attributes.class + '-list-link')!= value
+include ../variables/home.pug
+include ../mixins/common.pug
 
-- var icons = ['<i class="fab fa-facebook-f"></i>', '<i class="fab fa-google-plus-g"></i>','<i class="fab fa-instagram"></i>', '<i class="fab fa-twitter"></i>'] 
 
 header
-    .top
+    // start header top
+    section.top
         .container.top__wrapper
             .top__socials
                 ul.top__socials-list
@@ -14,6 +12,26 @@ header
             .top__login
                 ul.top__login-list
                     +list-icon-top-header(["đăng kí","đăng nhập"])(class="top__login")
-                    
-   
+    // end header top
 
+    // start header middle (logo + hotline +  search)
+    section.middle
+        .container.middle__wrapper
+            .middle__logo
+                h1
+                    a(href="" class="logo__link") 
+                        img(src="../../assets/images/Logo.png", class="middle__logo-img" alt="logo")
+            .middle__hotline
+                .middle__hotline-hotline
+                    p.middle__hotline-title hotline :
+                    p.middle__hotline-phone (04) 9500 9650 - (04) 9500 8850
+                .middle__hotline-order
+                    p.middle__hotline-title đặt hàng nhanh :
+                    p.middle__hotline-phone (04) 9500 9650 - (04) 9500 8850
+            .middle__search-bar
+                input(type="text" placeholder="Tìm kiếm..." class="middle__input-search")
+    // end header middle (logo + hotline +  search)
+
+    // start menu
+        
+    // end menu
