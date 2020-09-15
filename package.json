@@ -1,0 +1,26 @@
+{
+  "name": "FE36_Trung_P1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "sass --watch ./sass/custom.scss ./styles/custom.css",
+    "pug": "pug -w ./pug/block -o ./layouts -P",
+    "start": "npm-run-all -p -r scss pug"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeVanTrung98/FE36_Trung_P1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  },
+  "bugs": {
+    "url": "https://github.com/LeVanTrung98/FE36_Trung_P1/issues"
+  },
+  "homepage": "https://github.com/LeVanTrung98/FE36_Trung_P1#readme"
+}
