@@ -1,0 +1,66 @@
+// menu drop down
+mixin block-items-drop-down(values)
+    .block
+        img(src=values.img, class="block__img" alt="img")
+        .content
+            h3.block__title= values.title
+            p.block__quality= `${values.quality} x` 
+            p.block__price= `${values.price} Đ`
+        .block__icon-close
+            a(href="" class="block__icon-link")
+                i(class="fas fa-times")
+
+//- // list item in submenu 
+//- mixin list-item(value)
+//-     li.sub-menu__list-item.menu__list-item--hover
+//-         i(class="fas fa-caret-right")
+//-         a(href="" class="sub-menu__list-link menu__list-link")= value
+
+//- // submenu
+//- mixin list-link(values)
+//-     ul.sub-menu.sub-menu--format.sub-menu--disable
+//-         each value in values
+//-             +list-item(value)
+
+//- // submenu
+//- mixin submenu(values)
+//-     ul.sub-menu.sub-menu--disable
+//-         each value, index in values
+//-             if value
+//-                 li.sub-menu__list-item.menu__list-item--hover
+//-                     i(class="fas fa-caret-right")
+//-                     a(href="" class="sub-menu__list-link menu__list-link")= index
+//-                     +list-link(value)
+//-             else
+//-                 +list-item(index)
+
+// list item in submenu 
+mixin list-item(value)
+    li.sub-menu__list-item(class!= attributes.class)
+        i(class="fas fa-caret-right")
+        a(href="" class="sub-menu__list-link menu__list-link")= value
+// submenu
+mixin list-link(values)
+    ul.sub-menu.sub-menu--format.sub-menu--disable
+        each value in values
+            +list-item(value)(class!= attributes.class)
+// submenu
+mixin submenu(values)
+    ul.sub-menu.sub-menu--disable
+        each value, index in values
+            if value
+                li.sub-menu__list-item(class!= attributes.class)
+                    i(class="fas fa-caret-right")
+                    a(href="" class="sub-menu__list-link menu__list-link")= index
+                    +list-link(value)(class!= attributes.class)
+            else
+                +list-item(index)(class!= attributes.class)
+
+mixin icon-title(value)
+    .wrapper-icon-title
+        ul(class!=attributes.class).wrapper-icon-title__list
+            li.wrapper-icon-title__item .
+            li.wrapper-icon-title__item .
+            li.wrapper-icon-title__item .
+            li.wrapper-icon-title__item .
+        a(href="" class!=attributes.class).wrapper-icon-title__link= value
