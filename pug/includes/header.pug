@@ -165,3 +165,32 @@ header
                 +product-item(value_products5)
                 +product-item(value_products6)
     // end sản phẩm nổi bật
+
+    // start new product
+    section.new-product.container
+        .new-product__row-title
+            +icon-title("sản phẩm mới")(class="new-product-title--format")
+
+            ul.new-product__category-tag
+                each value in category_tag
+                    li.new-product__item-tag
+                        a(href="" class="new-product__link-tag")= value 
+
+            .new-product__group-button
+                a(href="" class="new-product__link-pre new-product__link")
+                    i(class="fas fa-caret-left")
+                a(href="" class="new-product__link-next new-product__link")
+                    i(class="fas fa-caret-right")
+        .new-product__row-content
+            +product-item(value_new_product)
+            +product-item(value_new_product2)
+            +product-item(value_new_product3)
+    // end new product
+
+    // start banner mid
+    section.banner-mid.container
+        a(href="" class="banner-mid__link")
+            img(src="../../assets/images/banner2.png", class="banner-mid__img"  alt="banner mid 1")
+        a(href="" class="banner-mid__link")   
+            img(src="../../assets/images/banner3.png", class="banner-mid__img"  alt="banner mid 1")
+    // end banner mid
