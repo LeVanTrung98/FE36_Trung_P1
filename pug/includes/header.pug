@@ -110,3 +110,58 @@ header
                         p.menu__total-price 4.500.000 Đ
                         a(href="" class="menu__total-pay") thanh toán
     // end menu
+
+    // start slider
+    section.slider.container
+        .slider__left
+            input(type="radio" name="slider" id="slider1" checked)
+            input(type="radio" name="slider" id="slider2")
+            input(type="radio" name="slider" id="slider3")
+            .slider__wrapper
+                .slider__block#one
+                    a(href="").slider__block-item
+                        img(src="../../assets/images/banner-1.png", alt="banner 1" class="slider__img")
+                .slider__block#two
+                    a(href="").slider__block-item
+                        img(src="../../assets/images/banner2.png", alt="banner 1" class="slider__img")
+                .slider__block#three
+                    a(href="").slider__block-item
+                        img(src="../../assets/images/banner3.png", alt="banner 1" class="slider__img")
+
+            ul.slider__number-of-slider
+                li.slider__item#dots1
+                    label(for="slider1").slider__item-link
+                li.slider__item#dots2
+                    label(for="slider2").slider__item-link
+                li.slider__item#dots3
+                    label(for="slider3").slider__item-link
+
+        .slider__right
+            +group-slider({'icon':'<i class="fas fa-plane"></i>', 'title': "miễn phí vận chuyển", 'description' : 'Chúng tôi vận chuyển miễn phí với các đơn hàng  trị giá trên 100.000 Đ'})
+            +group-slider({'icon':'<i class="fas fa-sync-alt"></i>', 'title': "chính sách đổi trả", 'description' : 'Nếu phát hiện lỗi của nhà sản xuất, chúng tôi sẽ đổi mới sản phẩm trong 7 ngày đầu tiên'})
+            +group-slider({'icon':'<i class="fas fa-gift"></i>', 'title': "KHUYẾN MẠI HÀNG TUẦN", 'description' : 'Mỗi thứ 7 hàng tuần đều có chương trình giảm giá và khuyến mại lớn.'})
+            +group-slider({'icon':'<i class="fas fa-thumbs-up"></i>', 'title': "CAM KẾT HÀNG CHÍNH HÃNG", 'description' : 'Chúng tôi cam kết bán hàng chính hãng 100% với tất cả các loại sản phẩm.'})   
+    // end slider
+
+    // start sản phẩm nổi bật
+    section.hot-products.container
+        .hot-products__row-title
+            +icon-title("sản phẩm nổi bật")(class="hot-products-title--format")
+            .hot-products__group-button
+                a(href="" class="hot-products__link-pre hot-products__link")
+                    i(class="fas fa-caret-left")
+                a(href="" class="hot-products__link-next hot-products__link")
+                    i(class="fas fa-caret-right")
+        .hot-products__row-content
+            .hot-products__left
+               
+                each value in value_hot_products
+                    +icon-title(value)(class="wrapper-icon-title--format")
+            .hot-products__right
+                +product-item(value_products)
+                +product-item(value_products2)
+                +product-item(value_products3)
+                +product-item(value_products4)
+                +product-item(value_products5)
+                +product-item(value_products6)
+    // end sản phẩm nổi bật

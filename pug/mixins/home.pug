@@ -56,6 +56,7 @@ mixin submenu(values)
             else
                 +list-item(index)(class!= attributes.class)
 
+// icon before title (exm: sản phẩm bán chay...)
 mixin icon-title(value)
     .wrapper-icon-title
         ul(class!=attributes.class).wrapper-icon-title__list
@@ -64,3 +65,32 @@ mixin icon-title(value)
             li.wrapper-icon-title__item .
             li.wrapper-icon-title__item .
         a(href="" class!=attributes.class).wrapper-icon-title__link= value
+
+mixin group-slider(values)
+    .slider__block
+        !=values.icon
+        .slider__content
+            p.slider__block-title= values.title
+            p.slider__block-description= values.description
+
+mixin product-item(values)
+    .product-item(class!= attributes.class)
+        a(href="")
+            img(src= values.img, alt= values.title class="product-item__img")
+        p.product-item__price= values.price
+        h3
+            a(href="" class="product-item__link-title")=  values.title
+        .product-item__rate
+            .product-item__point
+                i(class="fas fa-star")
+                i(class="fas fa-star")
+                i(class="fas fa-star")
+                i(class="fas fa-star")
+                i(class="far fa-star")
+            p.product-item__number-commands= `(${values.command} Đánh giá)`
+        .product-item__group-btn.product-item__group-btn--disable
+            a(href="" class="product-item__link-buy product-item__link-btn") Mua Ngay
+            a(href="" class="product-item__link-detail product-item__link-btn") Xem Chi Tiết
+        
+        
+        
