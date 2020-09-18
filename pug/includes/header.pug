@@ -171,10 +171,7 @@ header
         .new-product__row-title
             +icon-title("sản phẩm mới")(class="new-product-title--format")
 
-            ul.new-product__category-tag
-                each value in category_tag
-                    li.new-product__item-tag
-                        a(href="" class="new-product__link-tag")= value 
+            +category-tag(category_tag)(class="new-product")
 
             .new-product__group-button
                 a(href="" class="new-product__link-pre new-product__link")
@@ -194,3 +191,23 @@ header
         a(href="" class="banner-mid__link")   
             img(src="../../assets/images/banner3.png", class="banner-mid__img"  alt="banner mid 1")
     // end banner mid
+
+    //start selling products (sản phẩm bán chạy)
+    section.selling-product.container
+        .selling-product__row-title
+            +icon-title("sản phẩm bán chạy")(class="selling-product-title--format")
+
+            +category-tag(category_tag)(class="selling-product")
+
+            .new-product__group-button
+                a(href="" class="selling-product__link-pre selling-product__link")
+                    i(class="fas fa-caret-left")
+                a(href="" class="selling-product__link-next selling-product__link")
+                    i(class="fas fa-caret-right")
+        .selling-product__row-content
+            +product-item(sell_products6)
+            +product-item(sell_products2)
+            +product-item(sell_products4)
+            +product-item(sell_products3)
+            +product-item(sell_products5)
+    //end selling products (sản phẩm bán chạy)

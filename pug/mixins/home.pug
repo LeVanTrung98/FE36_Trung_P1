@@ -89,9 +89,14 @@ mixin product-item(values)
                 i(class="fas fa-star")
                 i(class="far fa-star")
             p.product-item__number-commands= `(${values.command} Đánh giá)`
-        .product-item__group-btn.product-item__group-btn--disable
-            a(href="" class="product-item__link-buy product-item__link-btn") Mua Ngay
-            a(href="" class="product-item__link-detail product-item__link-btn") Xem Chi Tiết
+        if values.status
+            .product-item__group-btn.product-item__group-btn--disable
+                a(href="" class="product-item__link-buy product-item__link-btn") Mua Ngay
+                a(href="" class="product-item__link-detail product-item__link-btn") Xem Chi Tiết
         
-        
-        
+
+mixin category-tag(values)
+    ul(class!=`${attributes.class}__category-tag`)
+        each value in values
+            li(class!=`${attributes.class}__item-tag`)
+                a(href="" class!=`${attributes.class}__link-tag`)= value 
