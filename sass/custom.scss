@@ -928,4 +928,41 @@ a:any-link{
         }
     }
 }
-/* start new available  */
+/* end new available  */
+
+
+/* start brand home */
+.brand{
+    height: 170px;
+    margin-top: 90px;
+    background-color: #f7f7f7;
+    
+    &__wrapper{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+    }
+    &__btn{
+        position: absolute;
+    }
+    &__btn-left{
+        left:-6%;
+    }
+    &__btn-right{
+        right:-6%;
+    }
+    &__link-btn i{
+        color:$color-89;
+        font-size: 30px;
+    }
+}
+/* end brand home */
+/* start new letter*/
+.new-letter{
+    height: 225px;
+    background: #000000 url(../assets/images/new-letter.png) no-repeat center center;
+    background-size: cover;
+}
+/* end new letter*/

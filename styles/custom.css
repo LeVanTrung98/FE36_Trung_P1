@@ -752,6 +752,42 @@ a:any-link {
   margin: 13px 0;
 }
 
-/* start new available  */
+/* end new available  */
+/* start brand home */
+.brand {
+  height: 170px;
+  margin-top: 90px;
+  background-color: #f7f7f7;
+}
+.brand__wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+.brand__btn {
+  position: absolute;
+}
+.brand__btn-left {
+  left: -6%;
+}
+.brand__btn-right {
+  right: -6%;
+}
+.brand__link-btn i {
+  color: #898989;
+  font-size: 30px;
+}
+
+/* end brand home */
+/* start new letter*/
+.new-letter {
+  height: 225px;
+  background: #000000 url(../assets/images/new-letter.png) no-repeat center center;
+  background-size: cover;
+}
+
+/* end new letter*/
 
 /*# sourceMappingURL=custom.css.map */
