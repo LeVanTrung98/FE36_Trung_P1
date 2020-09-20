@@ -25,11 +25,11 @@
   font-family: myriad-pro;
 }
 
-.middle__input-search {
+.new-letter input[type=email]::placeholder, .new-letter__title, .middle__input-search {
   font-family: roboto;
 }
 
-.product-item__link-btn, .product-item__link-title, .product-item__price, .wrapper-icon-title__link, .menu__cart-drop-down .menu__total-pay, .menu__cart-drop-down .block__title {
+.new-letter input[type=submit], .product-item__link-btn, .product-item__link-title, .product-item__price, .wrapper-icon-title__link, .menu__cart-drop-down .menu__total-pay, .menu__cart-drop-down .block__title {
   font-family: roboto-medium;
 }
 
@@ -786,6 +786,41 @@ a:any-link {
   height: 225px;
   background: #000000 url(../assets/images/new-letter.png) no-repeat center center;
   background-size: cover;
+  display: flex;
+  align-items: center;
+}
+.new-letter__wrapper {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}
+.new-letter__title {
+  font-size: 24px;
+  color: #ffffff;
+  margin-bottom: 25px;
+}
+.new-letter input[type=email] {
+  height: 50px;
+  width: 615px;
+  border-radius: 25px;
+  outline: none;
+  text-indent: 25px;
+}
+.new-letter input[type=email]::placeholder {
+  text-indent: 25px;
+  font-size: 16px;
+  color: #acacac;
+}
+.new-letter input[type=submit] {
+  border-radius: 25px;
+  font-size: 14px;
+  color: #ffffff;
+  background-color: #f5bd10;
+  padding: 0px 40px;
+  height: 50px;
+  text-transform: capitalize;
+  outline: none;
+  cursor: pointer;
 }
 
 /* end new letter*/

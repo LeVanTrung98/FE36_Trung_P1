@@ -964,5 +964,44 @@ a:any-link{
     height: 225px;
     background: #000000 url(../assets/images/new-letter.png) no-repeat center center;
     background-size: cover;
+    display: flex;
+    align-items: center;
+
+    &__wrapper{
+        width: 50%;
+        margin:auto;
+        text-align: center;
+    }
+    &__title{
+        @extend %font-roboto;
+        font-size: 24px;
+        color: $color-white;
+        margin-bottom: 25px;
+    }
+    input[type="email"]{
+        height: 50px;
+        width: 615px;
+        border-radius: 25px;
+        outline: none;
+        text-indent: 25px;
+    }
+    input[type="email"]::placeholder{
+        text-indent: 25px;
+        @extend %font-roboto;
+        font-size: 16px;
+        color:#acacac;
+    }
+    input[type="submit"]{
+        border-radius: 25px;
+        @extend %font-roboto-medium;
+        font-size: 14px;
+        color:$color-white;
+        background-color: $color-yellow;
+        padding:0px 40px;
+        height: 50px;
+        text-transform: capitalize;
+        outline: none;
+        cursor: pointer;
+    }
 }
 /* end new letter*/
