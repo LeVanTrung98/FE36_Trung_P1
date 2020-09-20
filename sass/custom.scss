@@ -43,6 +43,9 @@
 %list-style{
     list-style: none;
 }
+%section-margin-top{
+    margin-top: 60px !important;
+}
 $color-text: #363636;
 $color-yellow: #f5bd10;
 $color-gray: #b6b6b6;
@@ -596,7 +599,7 @@ a:any-link{
 }
 /* start sản phẩm nổi bật*/
 .hot-products{
-    margin-top: 60px;
+    @extend %section-margin-top;
     &__row-title{
         @extend %row-title-btn;
     }
@@ -732,7 +735,8 @@ a:any-link{
     margin-left: 5px;
 }
 .new-product{
-    margin-top: 60px;
+    @extend %section-margin-top;
+
     &__row-title{
         @extend %row-title-btn;
     }
@@ -799,7 +803,8 @@ a:any-link{
 
 /* start selling product (sản phẩm bán chạy) */
 .selling-product{
-    margin-top: 60px;
+    @extend %section-margin-top;
+
     &__row-title{
         @extend %row-title-btn;
     }
@@ -836,12 +841,11 @@ a:any-link{
 
     &__row-content{
         display: grid;
-        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-columns: 23.5% 23.5% 23.5% 23.5%;
         grid-template-rows: auto auto;
         justify-content: space-between;
-        align-content: space-between;
-        gap: 25px 25px;
         margin-top: 40px;
+        row-gap: 3%;
     }
     .product-item{
         width: 100%;
@@ -858,3 +862,70 @@ a:any-link{
     }
 }
 /* end selling product (sản phẩm bán chạy) */
+
+/* start banner three*/
+.banner-three{
+    @extend %section-margin-top;
+    &__img{
+        object-fit: cover;
+        width: 100%;
+    }
+}
+/* end banner three*/
+.new-available{
+    @extend %section-margin-top;
+
+    &__row-title{
+        @extend %row-title-btn;
+    }
+    &-title--format{
+        font-size: 18px;
+    }
+    &__link{
+        @extend %title-link;
+
+        &-pre{
+            @extend %btn-pre;
+        }
+        &-next{
+            @extend %btn-next;
+        }
+    }
+    &__row-content{
+        @extend %row-content;
+        flex-wrap: wrap;
+        gap:20px;
+    }
+
+    .product-item{
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 49%;
+        padding:20px 15px;
+        &__link-btn{
+            font-size: 12px;
+            padding: 15px 25px;
+        }
+        &__wrapper{
+            text-align: left;
+            margin-left:20px;
+        }
+        &__group-btn{
+            display: block;
+            padding: 10px 0 40px 0;
+        }
+        &__rate{
+            justify-content: start;
+            margin-top: 13px;
+        }
+        &__description{
+            @extend %font-arial;
+            color: $color-89;
+            font-size: 13px;
+            margin:13px 0;
+        }
+    }
+}
+/* start new available  */

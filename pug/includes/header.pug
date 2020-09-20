@@ -211,3 +211,28 @@ header
             +product-item(sell_products3)
             +product-item(sell_products5)
     //end selling products (sản phẩm bán chạy)
+
+
+    // start banner 3
+    section.banner-three.container
+        a(href="")
+            img(src="../../assets/images/banner 3.png", alt="banner 3" class="banner-three__img")
+    // end banner 3
+
+    // start new available(hàng mới về)
+    section.new-available.container
+        .new-available__row-title
+            +icon-title("Hàng mới về")(class="new-available-title--format")
+
+            .new-available__group-button
+                a(href="" class="new-available__link-pre new-available__link")
+                    i(class="fas fa-caret-left")
+                a(href="" class="new-available__link-next new-available__link")
+                    i(class="fas fa-caret-right")
+        
+        .new-available__row-content
+            +product-item(new_available)
+            +product-item(new_available2)
+            +product-item(new_available3)
+            +product-item(new_available4)
+    // end new available

@@ -76,23 +76,45 @@ mixin group-slider(values)
 // block item product have price, image, title, command of product
 mixin product-item(values)
     .product-item(class!= attributes.class)
-        a(href="")
-            img(src= values.img, alt= values.title class="product-item__img")
-        p.product-item__price= values.price
-        h3
-            a(href="" class="product-item__link-title")=  values.title
-        .product-item__rate
-            .product-item__point
-                i(class="fas fa-star")
-                i(class="fas fa-star")
-                i(class="fas fa-star")
-                i(class="fas fa-star")
-                i(class="far fa-star")
-            p.product-item__number-commands= `(${values.command} Đánh giá)`
-        if values.status
-            .product-item__group-btn.product-item__group-btn--disable
-                a(href="" class="product-item__link-buy product-item__link-btn") Mua Ngay
-                a(href="" class="product-item__link-detail product-item__link-btn") Xem Chi Tiết
+        if values.description
+            a(href="")
+                img(src= values.img, alt= values.title class="product-item__img")
+            .product-item__wrapper
+                
+                h3
+                    a(href="" class="product-item__link-title")=  values.title
+                .product-item__rate
+                    .product-item__point
+                        i(class="fas fa-star")
+                        i(class="fas fa-star")
+                        i(class="fas fa-star")
+                        i(class="fas fa-star")
+                        i(class="far fa-star")
+                    p.product-item__number-commands= `(${values.command} Đánh giá)`
+                p.product-item__description= values.description
+                p.product-item__price= values.price
+                if values.status
+                    .product-item__group-btn.product-item__group-btn--disable
+                        a(href="" class="product-item__link-buy product-item__link-btn") Mua Ngay
+                        a(href="" class="product-item__link-detail product-item__link-btn") Xem Chi Tiết
+        else
+            a(href="")
+                img(src= values.img, alt= values.title class="product-item__img")
+            p.product-item__price= values.price
+            h3
+                a(href="" class="product-item__link-title")=  values.title
+            .product-item__rate
+                .product-item__point
+                    i(class="fas fa-star")
+                    i(class="fas fa-star")
+                    i(class="fas fa-star")
+                    i(class="fas fa-star")
+                    i(class="far fa-star")
+                p.product-item__number-commands= `(${values.command} Đánh giá)`
+            if values.status
+                .product-item__group-btn.product-item__group-btn--disable
+                    a(href="" class="product-item__link-buy product-item__link-btn") Mua Ngay
+                    a(href="" class="product-item__link-detail product-item__link-btn") Xem Chi Tiết
         
 
 mixin category-tag(values)

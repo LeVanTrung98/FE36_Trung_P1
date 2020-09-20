@@ -37,7 +37,7 @@
   font-family: roboto-bold;
 }
 
-.selling-product__link-tag, .new-product__link-tag, .product-item__number-commands, .slider__right .slider__block-description, .mega-menu__item--format .menu__list-link, .wrapper-icon-title--format, .menu .sub-menu__list-link, html {
+.new-available .product-item__description, .selling-product__link-tag, .new-product__link-tag, .product-item__number-commands, .slider__right .slider__block-description, .mega-menu__item--format .menu__list-link, .wrapper-icon-title--format, .menu .sub-menu__list-link, html {
   font-family: Arial;
 }
 
@@ -51,6 +51,10 @@
 
 .sub-menu__list-title, .menu .sub-menu__list-item, .menu .sub-menu {
   list-style: none;
+}
+
+.new-available, .banner-three, .selling-product, .new-product, .hot-products {
+  margin-top: 60px !important;
 }
 
 .container {
@@ -489,12 +493,12 @@ a:any-link {
 }
 
 /* end slider */
-.selling-product__row-title, .new-product__row-title, .hot-products__row-title {
+.new-available__row-title, .selling-product__row-title, .new-product__row-title, .hot-products__row-title {
   display: flex;
   justify-content: space-between;
 }
 
-.selling-product__link, .new-product__link, .hot-products__link {
+.new-available__link, .selling-product__link, .new-product__link, .hot-products__link {
   font-size: 14px;
   width: 30px;
   height: 30px;
@@ -503,7 +507,7 @@ a:any-link {
   justify-content: center;
 }
 
-.selling-product__link-next, .new-product__link-next, .hot-products__link-next {
+.new-available__link-next, .selling-product__link-next, .new-product__link-next, .hot-products__link-next {
   background-color: #ffffff;
   color: #898989;
   border: 1px solid #898989;
@@ -511,21 +515,18 @@ a:any-link {
   margin-left: 7px;
 }
 
-.selling-product__link-pre, .new-product__link-pre, .hot-products__link-pre {
+.new-available__link-pre, .selling-product__link-pre, .new-product__link-pre, .hot-products__link-pre {
   background-color: #252525;
   color: #ffffff;
 }
 
-.new-product__row-content, .hot-products__row-content {
+.new-available__row-content, .new-product__row-content, .hot-products__row-content {
   display: flex;
   justify-content: space-between;
   margin-top: 40px;
 }
 
 /* start sản phẩm nổi bật*/
-.hot-products {
-  margin-top: 60px;
-}
 .hot-products-title--format {
   font-size: 18px;
 }
@@ -637,9 +638,6 @@ a:any-link {
   margin-left: 5px;
 }
 
-.new-product {
-  margin-top: 60px;
-}
 .new-product-title--format {
   font-size: 18px;
 }
@@ -675,9 +673,6 @@ a:any-link {
 
 /* end banner mid */
 /* start selling product (sản phẩm bán chạy) */
-.selling-product {
-  margin-top: 60px;
-}
 .selling-product-title--format {
   font-size: 18px;
 }
@@ -693,12 +688,11 @@ a:any-link {
 }
 .selling-product__row-content {
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-columns: 23.5% 23.5% 23.5% 23.5%;
   grid-template-rows: auto auto;
   justify-content: space-between;
-  align-content: space-between;
-  gap: 25px 25px;
   margin-top: 40px;
+  row-gap: 3%;
 }
 .selling-product .product-item {
   width: 100%;
@@ -714,5 +708,50 @@ a:any-link {
 }
 
 /* end selling product (sản phẩm bán chạy) */
+/* start banner three*/
+.banner-three__img {
+  object-fit: cover;
+  width: 100%;
+}
+
+/* end banner three*/
+.new-available-title--format {
+  font-size: 18px;
+}
+.new-available__row-content {
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.new-available .product-item {
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 49%;
+  padding: 20px 15px;
+}
+.new-available .product-item__link-btn {
+  font-size: 12px;
+  padding: 15px 25px;
+}
+.new-available .product-item__wrapper {
+  text-align: left;
+  margin-left: 20px;
+}
+.new-available .product-item__group-btn {
+  display: block;
+  padding: 10px 0 40px 0;
+}
+.new-available .product-item__rate {
+  justify-content: start;
+  margin-top: 13px;
+}
+.new-available .product-item__description {
+  color: #898989;
+  font-size: 13px;
+  margin: 13px 0;
+}
+
+/* start new available  */
 
 /*# sourceMappingURL=custom.css.map */
