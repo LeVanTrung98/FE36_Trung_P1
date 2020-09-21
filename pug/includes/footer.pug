@@ -1,0 +1,64 @@
+include ../variables/home.pug
+footer.footer
+    .footer-info
+        .container
+            .footer-info__top
+                .footer-info__block
+                    +icon-title("về chúng tôi")(class="footer-info-title--format")
+                    +icon-title(value_footer_info, 'disable')(class="wrapper-icon-title--format")
+                    +icon-title(value_footer_info2, '', '<i class="fas fa-map-marker-alt"></i>')(class="wrapper-icon-title--format")
+                    +icon-title(value_footer_info3, '', '<i class="fas fa-envelope"></i>')(class="wrapper-icon-title--format")
+                    +icon-title(value_footer_info4, '', '<i class="fas fa-mobile-alt"></i>')(class="wrapper-icon-title--format")
+                .footer-info__block
+                    +icon-title("chính sách")(class="footer-info-title--format")
+                    +icon-title(value_footer_info5, 'disable')(class="wrapper-icon-title--format")
+                    +icon-title(value_footer_info6, 'disable')(class="wrapper-icon-title--format")
+                    +icon-title(value_footer_info7, 'disable')(class="wrapper-icon-title--format")
+                    +icon-title(value_footer_info8, 'disable')(class="wrapper-icon-title--format")
+                    +icon-title(value_footer_info9, 'disable')(class="wrapper-icon-title--format")
+                    +icon-title(value_footer_info10, 'disable')(class="wrapper-icon-title--format")
+                .footer-info__block
+                    +icon-title("Dịch vụ & hỗ trợ")(class="footer-info-title--format")
+                    +icon-title(value_footer_info11, 'disable')(class="wrapper-icon-title--format")
+                    +icon-title(value_footer_info12, 'disable')(class="wrapper-icon-title--format")
+                    +icon-title(value_footer_info13, 'disable')(class="wrapper-icon-title--format")
+                    +icon-title(value_footer_info14, 'disable')(class="wrapper-icon-title--format")
+                    +icon-title(value_footer_info15, 'disable')(class="wrapper-icon-title--format")
+                    +icon-title(value_footer_info16, 'disable')(class="wrapper-icon-title--format")
+                .footer-info__block
+                    +icon-title("Tin tức - sự kiện")(class="footer-info-title--format")
+                    +icon-title(value_footer_info17, 'disable')(class="wrapper-icon-title--format")
+                    +icon-title(value_footer_info18, 'disable')(class="wrapper-icon-title--format")
+                    +icon-title(value_footer_info19, 'disable')(class="wrapper-icon-title--format")
+                    +icon-title(value_footer_info20, 'disable')(class="wrapper-icon-title--format")
+                    +icon-title(value_footer_info21, 'disable')(class="wrapper-icon-title--format")
+                    +icon-title(value_footer_info22, 'disable')(class="wrapper-icon-title--format")
+                .footer-info__block
+                    +icon-title("Kết nối")(class="footer-info-title--format")
+                    +icon-title(value_footer_info23, '','<i class="fab fa-facebook-f"></i>')(class="wrapper-icon-title--format")
+                    +icon-title(value_footer_info24, '', '<i class="fab fa-twitter"></i>')(class="wrapper-icon-title--format")
+                    +icon-title(value_footer_info25, '', '<i class="fab fa-google-plus-g"></i>')(class="wrapper-icon-title--format")
+                    +icon-title(value_footer_info26, '','<i class="fab fa-skype"></i>')(class="wrapper-icon-title--format")
+                    +icon-title(value_footer_info27, '','<i class="fab fa-instagram"></i>')(class="wrapper-icon-title--format")
+            .footer-info__bottom
+                .footer-info__pay
+                    p.footer-info__title Thanh toán:
+                    .footer-info__group-info-pay
+                        each value in value_info_pay
+                            +group-pay-info(value)
+                       
+                .footer-info__contact
+                    p.footer-info__title Giải đáp nhanh:
+                    .footer-info__group-contact
+                        +block-contact(value_footer_contact)
+                        +block-contact(value_footer_contact2)
+    .footer-bottom
+        .container.footer-bottom-wrapper
+            .footer-bottom__coppy-right
+                p.footer-bottom__title.
+                    Bản quyền thuộc về #[span.marker Design Team]. Phát triển bởi #[span.marker Bizweb].
+            .footer-bottom__menu
+                ul.footer-bottom__list
+                    each value in value_footer_menu
+                        li.footer-bottom__item 
+                            a(href="" class="footer-bottom__link")= value

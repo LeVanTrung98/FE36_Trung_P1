@@ -57,14 +57,26 @@ mixin submenu(values)
                 +list-item(index)(class!= attributes.class)
 
 // icon before title (exm: sản phẩm bán chay...)
-mixin icon-title(value)
-    .wrapper-icon-title
-        ul(class!=attributes.class).wrapper-icon-title__list
-            li.wrapper-icon-title__item .
-            li.wrapper-icon-title__item .
-            li.wrapper-icon-title__item .
-            li.wrapper-icon-title__item .
-        a(href="" class!=attributes.class).wrapper-icon-title__link= value
+mixin icon-title(value, hide_icon= "", icon="")
+    if hide_icon
+        .wrapper-icon-title
+            a(href="" class!=attributes.class).wrapper-icon-title__link= value
+        
+    else
+        if icon
+            .wrapper-icon-title
+                .wrapper-icon-title__list(class!=attributes.class)!= icon
+                a(href="" class!=attributes.class).wrapper-icon-title__link= value
+        else       
+            .wrapper-icon-title
+                ul(class!=attributes.class).wrapper-icon-title__list
+                    li.wrapper-icon-title__item .
+                    li.wrapper-icon-title__item .
+                    li.wrapper-icon-title__item .
+                    li.wrapper-icon-title__item .
+                a(href="" class!=attributes.class).wrapper-icon-title__link= value
+
+
 
 mixin group-slider(values)
     .slider__block
@@ -122,3 +134,25 @@ mixin category-tag(values)
         each value in values
             li(class!=`${attributes.class}__item-tag`)
                 a(href="" class!=`${attributes.class}__link-tag`)= value 
+
+
+
+
+// footer
+mixin group-pay-info(image)
+    a(href="" class="footer-info__link")
+        img(src= image, alt="pay info")
+
+mixin block-contact(values)
+    .footer-info__block
+        i(class="fas fa-phone")
+        .footer-info__content
+            p.footer-info__title= values.title
+            p.footer-info__hotline= values.phone
+
+mixin footer-info-top(values)
+    .footer-info__block
+            +icon-title(value.title)(class="footer-info-title--format")
+            each value in values.item
+                +icon-title(value.content, value.disable, value.icon)(class="wrapper-icon-title--format")
+            
