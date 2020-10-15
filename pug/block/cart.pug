@@ -1,6 +1,7 @@
-extend ../index.pug 
+extend ../processBuy.pug 
 
 block shopping-cart
+    
     section.shopping-cart.container
         // start breadcrum
         section.breadcumb.breadcumb--format
@@ -22,18 +23,18 @@ block shopping-cart
                         th số lượng
                         th thành tiền 
                         th xóa
-                    tbody
+                    tbody#table-cart
                         +shopping-cart(shopping_cart)
             table.total
                 tr
                     td Tổng Tiền:
-                    td 6.850.000 Đ
+                    td.total__money 6.850.000 Đ
                 tr
                     td Thế (VAT):
-                    td 6850.000 Đ
+                    td.total__vat 6850.000 Đ
                 tr
                     td Thanh Toán:
                     td.total-pay 7.520.000 Đ
             .product-item__group-btn
                 a(href="" class="product-item__link-detail product-item__link-btn") Tiếp tục mua hàng         
-                a(href="" class="product-item__link-buy product-item__link-btn") Thanh toán
+                a(href="../../layouts/formCheckoutBuy.html" class="product-item__link-buy product-item__link-btn") Thanh toán

@@ -72,17 +72,18 @@ mixin blog-comments(value)
             p.blog-list__content= value.content
 
 
-mixin shopping-cart(values)
+mixin shopping-cart(values, status="enable")
     each value in values
         tr
             td= value.stt 
             td
                 img(src=value.img class="shopping-cart__img" alt="")
             td= value.product
-            td= value.price
+            if(value.price, td= value.price, null)
             td 
                 input(type="number" value=value.quatity class="quality")
             td= value.total
-            td 
-                a(href="")
-                    i(class="fas fa-times icon-close")
+            if(status == "enable")
+                td 
+                    a(href="")
+                        i(class="fas fa-times icon-close")

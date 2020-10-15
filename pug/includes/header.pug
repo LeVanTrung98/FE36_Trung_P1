@@ -112,9 +112,10 @@ header
                     <i class="fas fa-shopping-cart"></i>
                     small.menu__cart-number 0
                 .menu__cart-drop-down.menu__cart-drop-down--disable
-                    +block-items-drop-down(val_drop_down)
-                    +block-items-drop-down(val_drop_down2)
-                    +block-items-drop-down(val_drop_down3)
+                    .menu__cart-wrapper
+                        +block-items-drop-down(val_drop_down)
+                        +block-items-drop-down(val_drop_down2)
+                        +block-items-drop-down(val_drop_down3)
                     .menu__total
                         p.menu__total-money tổng tiền: 
                         p.menu__total-price 4.500.000 Đ

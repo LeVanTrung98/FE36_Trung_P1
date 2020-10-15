@@ -1,0 +1,46 @@
+extend ../processBuy.pug 
+
+block payMent
+    section.payment.container
+        section.payment__left
+            .payment__block
+                p.payment__title 1. Chọn hình thức giao hàng
+                .payment__group
+                    form(action="" class="form")
+                        .form__group.form__transport
+                            input(type="radio" class="payment__input"
+                            onclick="onCheckTransport()" name="transport" value="") 
+                            label(for="") Giao Ngay 2H - 3H
+                        .form__group.form__transport
+                            input(type="radio" 
+                            onclick="onCheckTransport()" class="payment__input" name="transport")
+                            label(for="")  Giao Trong Ngày
+                        .form__group.form__transport
+                            input(type="radio" 
+                            onclick="onCheckTransport()" class="payment__input" name="transport") 
+                            label(for="") Giao tiêu chuẩn
+                .payment__block
+                    p.payment__title 2. Chọn hình thức thanh toán
+                    .payment__group
+                        form(action="" class="form")
+                            .form__group
+                                input(type="radio" class="payment__input" name="transport" value="") 
+                                label(for="") Thanh toán tiền mặt khi nhận hàng
+                            .form__group
+                                input(type="radio" class="payment__input" name="transport")
+                                label(for="")  Thanh toán bằng thẻ quốc tế Visa, Master, JCB
+                            .form__group
+                                input(type="radio" class="payment__input" name="transport") 
+                                label(for="") Thẻ ATM nội địa/Internet Banking (Miễn phí thanh toán)
+                            .form__group
+                                input(type="radio" class="payment__input" name="transport") 
+                                label(for="") Thanh toán bằng ví MoMo 
+                            .form__group
+                                input(type="radio" class="payment__input" name="transport") 
+                                label(for="") Thanh toán bằng ZaloPay
+                            .form__group
+                                input(type="radio" class="payment__input" name="transport") 
+                                label(for="") Thẻ quốc tế SHB Visa giảm 100.000đ cho đơn hàng từ 500.000đ 
+
+            .product-item__group-btn
+                input(type="submit" style="border:0; outline:none;" onclick="clickPayMent()" class="product-item__link-buy product-item__link-btn" value="Đặt Mua")

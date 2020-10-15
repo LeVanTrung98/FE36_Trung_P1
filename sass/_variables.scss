@@ -68,6 +68,8 @@ src: url('../assets/fonts/MYRIADPRO-REGULAR.OTF');
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+    outline: none;
 }
 %btn-next{
     background-color:map.get($color,"white");

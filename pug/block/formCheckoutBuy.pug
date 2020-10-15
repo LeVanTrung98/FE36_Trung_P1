@@ -1,0 +1,49 @@
+extend ../processBuy.pug 
+
+block infoUserBuyProduct
+    section.info-user-buy.container
+        // start breadcrum
+        section.breadcumb.breadcumb--format
+            p.breadcumb__title Trang chủ
+            <i class="fas fa-caret-right"></i>
+            p.breadcumb__subt-title Địa chỉ giao hàng
+        include ../variables/list.pug
+        include ../mixins/common.pug
+
+        section.info-user-buy__wrapper
+            section.shopping-cart__table.info-user-buy__table--format
+                .table-product-cart
+                    table
+                        thead
+                            th STT
+                            th SẢN PHẨM
+                            th thông tin
+                            th số lượng
+                            th thành tiền 
+                        tbody#table-cart
+                            +shopping-cart(checkoutBuyProduct, "disable")
+
+            section.register.container.info-user-buy__form--format
+                p.register__title THÔNG TIN CÁ NHÂN:
+                form(action="" class="register__form-info-user")
+                    - var form_title = ["Họ và tên:", 'Email:', 'Số điện thoại:', 'Địa chỉ:']
+                    .register__form-group
+                        label(for="name" class="register__lable-input") Họ và tên:
+                            span.register__maker *
+                        input(type="text" id="name" required class="register__input" placeholder=" Le Van A")
+                    .register__form-group
+                        label(for="email" class="register__lable-input") Email:
+                        input(type="email" id="email" class="register__input" placeholder=" levana@gmail.com")
+                    .register__form-group
+                        label(for="sdt" class="register__lable-input") Số điện thoại:
+                            span.register__maker *
+                        input(type="text" id="sdt" required  class="register__input" placeholder="0675361981")
+                    .register__form-group
+                        label(for="address" class="register__lable-input") Địa chỉ nhận hàng:
+                            span.register__maker *
+                        input(type="text" id="address" required  class="register__input"  placeholder="22 Nguyễn Phi Khanh, thành phố Đà Nẵng")
+                    .product-item__group-btn
+                        a(href="../../layouts/cart.html" class="product-item__link-detail product-item__link-btn") QUAY LẠI         
+                        input(type="submit" style="border:0; outline:none;" onclick="clickSubmitFormUserCheckout()" class="product-item__link-buy product-item__link-btn" value="Tiến Hành Thanh Toán") 
+            
+

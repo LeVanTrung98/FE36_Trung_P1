@@ -155,7 +155,7 @@
     &__cart-number{
         position: absolute;
         font-size: 14px;
-        padding: 0px 6px;
+        padding: 2px 6px;
         background: map.get($color,"yellow");
         border-radius: 10px;
         text-align: center;
@@ -168,6 +168,23 @@
         &:hover &-drop-down{
             display: initial;
         }
+
+        &-wrapper{
+            max-height:395px;
+            width: 100%;
+            overflow-y: scroll;
+            &::-webkit-scrollbar{
+                height: 4px;
+                width: 4px;
+                border-radius: 4px;
+                background: map.get($color,"ebebeb");
+            }
+            &::-webkit-scrollbar-thumb:vertical{
+                background-color:map.get($color,"gray");;
+                border-radius: 10px;
+            }
+        }
+
     }
     &__cart-drop-down{
         position: absolute;

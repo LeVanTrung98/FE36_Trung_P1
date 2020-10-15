@@ -6,6 +6,7 @@
     <title>Project 1</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
     <link rel="stylesheet" href="./../../styles/custom.css">
+    <script src="../../js/custom.js" type="module"></script>
   </head>
   <body>
     <!-- menu drop down-->
@@ -200,30 +201,32 @@
           </div>
           <div class="menu__cart"><a class="menu__cart-link" href="../../layouts/cart.html"><i class="fas fa-shopping-cart"></i><small class="menu__cart-number">0</small></a>
             <div class="menu__cart-drop-down menu__cart-drop-down--disable">
-                  <div class="block"><img class="block__img" src="../../assets/images/maykhoan1.png" alt="img">
-                    <div class="content">
-                      <h3 class="block__title">MÁY KHOAN BLACK  DECKER</h3>
-                      <p class="block__quality">1 x</p>
-                      <p class="block__price">1.200.000 Đ</p>
+              <div class="menu__cart-wrapper">
+                    <div class="block"><img class="block__img" src="../../assets/images/maykhoan1.png" alt="img">
+                      <div class="content">
+                        <h3 class="block__title">MÁY KHOAN BLACK  DECKER</h3>
+                        <p class="block__quality">1 x</p>
+                        <p class="block__price">1.200.000 Đ</p>
+                      </div>
+                      <div class="block__icon-close"><a class="block__icon-link" href=""><i class="fas fa-times"></i></a></div>
                     </div>
-                    <div class="block__icon-close"><a class="block__icon-link" href=""><i class="fas fa-times"></i></a></div>
-                  </div>
-                  <div class="block"><img class="block__img" src="../../assets/images/drop-down-2.png" alt="img">
-                    <div class="content">
-                      <h3 class="block__title">MÁY KHOAN BLACK  DECKER</h3>
-                      <p class="block__quality">1 x</p>
-                      <p class="block__price">1.200.000 Đ</p>
+                    <div class="block"><img class="block__img" src="../../assets/images/drop-down-2.png" alt="img">
+                      <div class="content">
+                        <h3 class="block__title">MÁY KHOAN BLACK  DECKER</h3>
+                        <p class="block__quality">1 x</p>
+                        <p class="block__price">1.200.000 Đ</p>
+                      </div>
+                      <div class="block__icon-close"><a class="block__icon-link" href=""><i class="fas fa-times"></i></a></div>
                     </div>
-                    <div class="block__icon-close"><a class="block__icon-link" href=""><i class="fas fa-times"></i></a></div>
-                  </div>
-                  <div class="block"><img class="block__img" src="../../assets/images/drop-down-3.png" alt="img">
-                    <div class="content">
-                      <h3 class="block__title">MÁY KHOAN BLACK  DECKER</h3>
-                      <p class="block__quality">1 x</p>
-                      <p class="block__price">1.200.000 Đ</p>
+                    <div class="block"><img class="block__img" src="../../assets/images/drop-down-3.png" alt="img">
+                      <div class="content">
+                        <h3 class="block__title">MÁY KHOAN BLACK  DECKER</h3>
+                        <p class="block__quality">1 x</p>
+                        <p class="block__price">1.200.000 Đ</p>
+                      </div>
+                      <div class="block__icon-close"><a class="block__icon-link" href=""><i class="fas fa-times"></i></a></div>
                     </div>
-                    <div class="block__icon-close"><a class="block__icon-link" href=""><i class="fas fa-times"></i></a></div>
-                  </div>
+              </div>
               <div class="menu__total">
                 <p class="menu__total-money">tổng tiền: </p>
                 <p class="menu__total-price">4.500.000 Đ</p><a class="menu__total-pay" href="">thanh toán</a>
@@ -296,7 +299,10 @@
                 <li class="wrapper-icon-title__item">.</li>
               </ul><a class="hot-products-title--format wrapper-icon-title__link" href="">sản phẩm nổi bật</a>
             </div>
-        <div class="hot-products__group-button"><a class="hot-products__link-pre hot-products__link" href=""><i class="fas fa-caret-left"></i></a><a class="hot-products__link-next hot-products__link" href=""><i class="fas fa-caret-right"></i></a></div>
+        <div class="hot-products__group-button">
+          <button class="hot-products__link-pre hot-products__link" type="button"><i class="fas fa-caret-left"></i></button>
+          <button class="hot-products__link-next hot-products__link" type="button"><i class="fas fa-caret-right"></i></button>
+        </div>
       </div>
       <div class="hot-products__row-content">
         <div class="hot-products__left">
@@ -389,7 +395,7 @@
                 </ul><a class="wrapper-icon-title--format wrapper-icon-title__link" href="">Máy in laser màu 3D</a>
               </div>
         </div>
-        <div class="hot-products__right">
+        <div class="hot-products__right" id="hot-product">
               <div class="product-item"><a href="../../layouts/detail.html"><img class="product-item__img" src="../../assets/images/hot-pro-1.png" alt="máy khoan black decker"></a>
                 <p class="product-item__price">1.500.000 Đ</p>
                 <h3><a class="product-item__link-title" href="">máy khoan black decker</a></h3>

@@ -38,16 +38,16 @@ block home
         .hot-products__row-title
             +icon-title("sản phẩm nổi bật")(class="hot-products-title--format")
             .hot-products__group-button
-                a(href="" class="hot-products__link-pre hot-products__link")
+                button(type="button" class="hot-products__link-pre hot-products__link")
                     i(class="fas fa-caret-left")
-                a(href="" class="hot-products__link-next hot-products__link")
+                button(type="button" class="hot-products__link-next hot-products__link")
                     i(class="fas fa-caret-right")
         .hot-products__row-content
             .hot-products__left
                
                 each value in value_hot_products
                     +icon-title(value)(class="wrapper-icon-title--format")
-            .hot-products__right
+            .hot-products__right#hot-product
                 +product-item(value_products)
                 +product-item(value_products2)
                 +product-item(value_products3)

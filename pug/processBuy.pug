@@ -1,0 +1,25 @@
+extend index.pug
+
+block processBuyProduct
+    section.step-buy
+        .wrapper
+            .block#step-buy1
+                p.step-buy__number.step-buy__number--active 1 
+                p.step-buy__description.step-buy__description--active Đăng nhập
+            .bar#step-buy-bar2
+                p.bar__straight 1
+                p.bar__arrow 1
+            .block#step-buy2
+                p.step-buy__number 2 
+                p.step-buy__description Địa chỉ nhận hàng
+            .bar#step-buy-bar3
+                p.bar__straight 1
+                p.bar__arrow 1
+            .block#step-buy3
+                p.step-buy__number 3 
+                p.step-buy__description Thanh toán
+    
+    block shopping-cart
+    block infoUserBuyProduct
+    block payMent
+    

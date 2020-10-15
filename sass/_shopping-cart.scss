@@ -23,10 +23,11 @@
         object-fit: cover;
     }
     .quality{
-        width: 40px;
+        width: 75px;
         height: 40px;
         text-align: center;
         text-indent: 10px;
+        outline: none;
     }
     .icon-close{
         color: #ff0000;
@@ -63,4 +64,94 @@
         }
     }
     
+}
+.step-buy {
+    width: 10%;
+    position: fixed;
+    top:15%;
+    height: 100vh;
+
+    .wrapper {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .block, .bar{
+            text-align: center;
+        }
+        .bar{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            &__straight{
+                width: 3px;
+                background-color: #ebebeb;
+                font-size: 0;
+                height:50% ;
+                display: flex;
+            }
+            &__arrow{
+                display: inline-flex;
+                justify-content: center;
+                width: 3px;
+                height: 14px;
+                background-color: #ebebeb;
+                font-size: 0;
+                transform: rotate(-45deg) translateX(-5px);
+                margin-top: -5px;
+                &::before{
+                    display: block;
+                    content : '';
+                    width: 3px;
+                    height: 13px;
+                    background-color: inherit;
+                    transform: rotate(90deg);
+                    transform-origin:bottom ;
+                }
+            }
+
+            &--active{
+                .bar__straight{
+                    background-color: #00b6f0;
+                }
+                .bar__arrow{
+                    background-color: #00b6f0;
+                }
+            }
+        }
+        
+    }
+    .step-buy__number {
+        background: #fff;
+        display: inline-block;
+        padding: 7px 12px;
+        border-radius: 20px;
+        font-size: 15px;
+        color: #333;
+        text-align: center;
+        box-shadow: rgb(102, 102, 102) 0px 0px 2px;
+        @extend %font-roboto;
+    }
+    &__description {
+        margin:5px 0;
+        font-size: 13px;
+        @extend %font-roboto;
+        color:  map.get($color,"gray");
+    }
+    .block--active{
+        .step-buy__number{
+            color: #fff; 
+            background: #00b6f0;  
+        }
+        .step-buy__description{
+            color: map.get($color,"text");
+        }
+    }
 }
